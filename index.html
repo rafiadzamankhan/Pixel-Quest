@@ -10,7 +10,13 @@
 
     <div class="game-container">
         <h1 class="game-title">PIXEL QUEST</h1>
-        <div class="stats">SCORE: <span id="scoreVal">0</span></div>
+        <div class="stats">
+            LEVEL: <span id="lvlVal">1</span> | SCORE: <span id="scoreVal">0</span>
+        </div>
+        <div class="menu-controls">
+            <button id="startStopBtn" class="game-btn">START GAME</button>
+            <button id="restartBtn" class="game-btn restart" style="display: none;">FINISH</button> <!--here finish and restart are the same for logic--> 
+        </div>
         <canvas id="gameCanvas" width="600" height="400"></canvas>
         
         <div class="controls">
