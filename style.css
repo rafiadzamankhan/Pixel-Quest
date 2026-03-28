@@ -165,22 +165,24 @@ canvas {
 /* Mobile Controls Layout */
 .controls {
     display: grid;
-    /* 3 columns: Left, Center (Up/Down), Right */
-    grid-template-columns: repeat(3, 70px);
-    /* 2 rows to allow the side buttons to span them */
+    /* Increased column width from 70px to 95px for a wider thumb area */
+    grid-template-columns: repeat(3, 95px);
+    /* Kept 2 rows at 70px height */
     grid-template-rows: repeat(2, 70px);
-    gap: 10px;
+    gap: 12px;
     margin-top: 25px;
     justify-content: center;
+    /* Ensures the D-pad doesn't overflow very small screens */
+    width: 100%;
 }
 
 .btn {
-    width: 100%; /* Take up full column width */
-    height: 100%; /* Take up full row height */
+    width: 100%; 
+    height: 100%; 
     background: #333;
     border: 4px solid #555;
     color: white;
-    font-size: 28px;
+    font-size: 32px; /* Slightly larger icons for the wider buttons */
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -188,11 +190,11 @@ canvas {
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px; /* Smoother corners for the wider shape */
     transition: all 0.1s;
 }
 
-/* Logic: Center column has one button per row */
+/* Positioning remains the same, but they will naturally stretch to the new widths */
 .up { 
     grid-column: 2; 
     grid-row: 1; 
@@ -203,7 +205,6 @@ canvas {
     grid-row: 2; 
 }
 
-/* Logic: Side columns span BOTH rows (Double Height) */
 .left { 
     grid-column: 1; 
     grid-row: span 2; 
@@ -219,7 +220,6 @@ canvas {
     transform: scale(0.95); 
     border-color: var(--primary);
 }
-
 
 /* Hide mobile controls on larger screens */
 @media (min-width: 800px) {
