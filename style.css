@@ -38,9 +38,11 @@ canvas {
 }
 
 .stats {
-    font-size: 28px;
+    font-size: 24px; 
     color: var(--accent);
     text-shadow: 2px 2px #000;
+    display: flex;
+    gap: 20px;
 }
 
 .game-title {
@@ -48,6 +50,120 @@ canvas {
     margin: 5px;
     letter-spacing: 2px;
 }
+
+.game-btn {
+    background: var(--primary);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.game-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.game-btn:active {
+    transform: translateY(0);
+}
+
+
+
+/* .menu-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.game-btn {
+    min-width: 120px;
+    background: var(--primary);
+    border: none;
+    padding: 12px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.game-btn.restart {
+    background: var(--accent);
+}
+
+.game-btn:active {
+    transform: translateY(2px);
+    opacity: 0.8;
+} */
+
+
+/* Button Container */
+.menu-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Unified Button Style */
+.game-btn {
+    /* Fixed sizing for perfect uniformity */
+    width: 140px; 
+    height: 45px;
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Aesthetics */
+    background: var(--primary);
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    
+    /* Typography */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Animation */
+    transition: all 0.2s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Specific color for restart */
+.game-btn.restart {
+    background: var(--accent);
+}
+
+/* Hover and Active states */
+.game-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.game-btn:active {
+    transform: translateY(0);
+    opacity: 0.9;
+}
+
+
+/**/
+
 
 /* Mobile Controls Layout */
 .controls {
@@ -69,6 +185,7 @@ canvas {
     align-items: center;
     justify-content: center;
     -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
     cursor: pointer;
     border-radius: 8px;
